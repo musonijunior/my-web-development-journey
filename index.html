@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Development Practical</title>
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) for clean icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SEMANTIC LAYOUT (TASK 1) -->
+  <header class="site-header">
+    <div class="container">
+      <h1 id="mainTitle">⚡ KING DAVID ACADEMY <span class="thin">| Web Practical</span></h1>
+      <!-- modern navigation -->
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="contact.html"><i class="fas fa-paper-plane"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / INTRO SECTION (modern card) -->
+    <section class="hero-section">
+      <div class="container">
+        <article class="intro-card glass">
+          <h2 class="section-heading"><i class="fas fa-user-astronaut"></i> About me</h2>
+          <p>Hi! I'm a grade 11 IT student with a passion for <strong>creative development</strong>.<br>I love building clean, interactive web experiences.</p>
+          <div class="divider"><span></span></div>
+          <p>My interest in web development started when I made my first interactive page.<br> I enjoy both the creative and logical sides: layout, styling, and behaviour.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TASK 2: LISTS, TABLE & MEDIA (organized in grid) -->
+    <section class="lists-tables-media">
+      <div class="container">
+        <h2 class="section-heading"><i class="fas fa-code"></i> Lists, tables & media</h2>
+        
+        <div class="grid-2col">
+          <!-- left column: lists -->
+          <div class="card">
+            <h3><i class="fas fa-star"></i> Favourite websites</h3>
+            <ul class="styled-list">
+              <li><a href="https://developer.mozilla.org" target="_blank"><i class="fab fa-mdn"></i> MDN Web Docs</a></li>
+              <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+              <li><a href="https://codepen.io" target="_blank"><i class="fab fa-codepen"></i> CodePen</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-laptop-code"></i> Programming languages</h3>
+            <ol class="styled-list ordered">
+              <li>JavaScript <span class="badge">#1</span></li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>TypeScript</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- modern table with better design -->
+        <div class="card table-card">
+          <h3><i class="fas fa-table"></i> Marks preview</h3>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr><th>Subject</th><th>Teacher</th><th>Marks</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>HTML & CSS</td><td>Ms. Anna</td><td>48</td></tr>
+                <tr><td>JavaScript</td><td>Mr. David</td><td>47</td></tr>
+                <tr><td>Web tools</td><td>Ms. Clara</td><td>50</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- MEDIA with modern cards + figcaption -->
+        <div class="grid-2col">
+          <figure class="media-card">
+            <img src="https://picsum.photos/400/250?grayscale&random=1" alt="Random grayscale workspace" loading="lazy">
+            <figcaption><i class="fas fa-camera"></i> Fig.1 – Random grayscale image</figcaption>
+          </figure>
+          <figure class="media-card">
+            <video controls poster="https://picsum.photos/400/250?random=2">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+            </video>
+            <figcaption><i class="fas fa-video"></i> Fig.2 – Sample flower video</figcaption>
+          </figure>
+        </div>
+
+        <!-- external hyperlink with style -->
+        <div class="external-link-wrapper">
+          <p><i class="fas fa-globe"></i> Visit <a href="https://www.w3.org" target="_blank" class="fancy-link">W3C official site <i class="fas fa-arrow-right"></i></a> for web standards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TASK 5: JAVASCRIPT INTERACTIVITY (modern control panel) -->
+    <section class="js-playground" id="interactive-demo">
+      <div class="container">
+        <h2 class="section-heading"><i class="fas fa-gamepad"></i> JavaScript fun (TASK 5)</h2>
+        <div class="button-panel">
+          <button id="alertBtn" class="btn primary"><i class="fas fa-bell"></i> Alert</button>
+          <button id="textChangerBtn" class="btn secondary"><i class="fas fa-pencil-alt"></i> Change text</button>
+          <button id="bgColorBtn" class="btn success"><i class="fas fa-palette"></i> Soft background</button>
+          <button id="dateBtn" class="btn info"><i class="fas fa-clock"></i> Show date</button>
+          <button id="toggleDarkBtn" class="btn dark"><i class="fas fa-moon"></i> Toggle dark</button>
+          <button id="hideShowBtn" class="btn warning"><i class="fas fa-eye-slash"></i> Hide section</button>
+        </div>
+        <div class="js-output">
+          <p id="dynamicText" class="dynamic-box">✨ This text can change dynamically.</p>
+          <p id="dateDisplay" class="date-box"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Grade 11 IT Practical | <i class="fas fa-folder-open"></i> Files: index, contact, style.css, script.js</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
